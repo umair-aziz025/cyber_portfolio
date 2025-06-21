@@ -284,6 +284,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **[⬆ Back to Top](#cybersecurity-portfolio---umair-aziz)**
 
-Made with ❤️ by [Umair Aziz](https://github.com/umair-aziz-025)
+Made with ❤️ by [Umair Aziz](https://github.com/umair-aziz025)
 
 </div>
