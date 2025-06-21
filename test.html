@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Animated Border Button</title>
+<style>
+    /* --- Basic setup for the dark theme demo --- */
+    body {
+        background-color: #121212;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* --- The Animated Button Style --- */
+    .animated-button {
+        position: relative;
+        z-index: 1;
+        
+        background-color: #1a1a1a;
+        color: #4cff4c;
+        border: none;
+        padding: 16px 32px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        overflow: hidden; 
+        border-radius: 8px;
+    }
+
+    /* --- The Magic: The Animated Border --- */
+    .animated-button::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        
+        top: -2px; 
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        
+        background: conic-gradient(
+            from 180deg,
+            transparent 0deg,
+            transparent 270deg,
+            #4cff4c 315deg,
+            transparent 360deg
+        );
+        
+        /* CHANGED: The animation duration now directly controls the speed of one full loop. */
+        animation: rotate 1.5s linear infinite;
+    }
+
+    /* This inner element ensures the button's background remains solid */
+    .animated-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 2px; 
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        background-color: #1a1a1a;
+        border-radius: 6px;
+    }
+
+
+    /* --- The Keyframe Animation ---
+    CHANGED: Simplified back to a standard, continuous rotation.
+    */
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+    <button class="animated-button">
+        Start Conversation
+    </button>
+
+</body>
+</html>
