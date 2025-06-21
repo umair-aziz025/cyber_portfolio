@@ -2,21 +2,20 @@
 
 > A cutting-edge, interactive cybersecurity portfolio showcasing professional expertise through dynamic visualizations and real-time monitoring dashboards.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-00ff88?style=for-the-badge&logo=vercel)](https://your-deployed-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-00ff88?style=for-the-badge&logo=vercel)](https://umairaziz-cyber-portfolio.vercel.app/)
 [![React](https://img.shields.io/badge/React-18.x-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
 ## 🚀 Live Demo
 
-**[View Portfolio →](https://your-deployed-url.vercel.app)**
+**[View Portfolio →](https://umairaziz-cyber-portfolio.vercel.app/)**
 
 ## 📋 Table of Contents
 
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
@@ -75,20 +74,6 @@ Built to showcase cybersecurity expertise while demonstrating proficiency in mod
 ### Deployment
 - **Vercel** - Serverless deployment platform
 - **Git** - Version control
-
-## 📱 Screenshots
-
-### Desktop View
-![Desktop Dashboard](./screenshots/desktop-dashboard.png)
-*Real-time cybersecurity monitoring dashboard*
-
-### Mobile View
-![Mobile Portfolio](./screenshots/mobile-view.png)
-*Responsive design optimized for mobile devices*
-
-### Interactive Features
-![Interactive Elements](./screenshots/interactive-features.png)
-*Dynamic animations and hover effects*
 
 ## 🚀 Installation
 
@@ -290,7 +275,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 📧 Email: [umairaziz682@gmail.com](mailto:umairaziz682@gmail.com)
 - 💼 LinkedIn: [umairaziz001](https://linkedin.com/in/umairaziz001)
-- 🌐 Portfolio: [your-deployed-url.vercel.app](https://your-deployed-url.vercel.app)
+- 🌐 Portfolio: [your-deployed-url.vercel.app](https://umairaziz-cyber-portfolio.vercel.app/)
 - 📱 Phone: +92 3146018728
 
 ---
@@ -299,6 +284,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **[⬆ Back to Top](#cybersecurity-portfolio---umair-aziz)**
 
-Made with ❤️ by [Umair Aziz](https://github.com/umairaziz)
+Made with ❤️ by [Umair Aziz](https://github.com/umair-aziz-025)
 
 </div>
