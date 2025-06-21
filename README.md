@@ -275,7 +275,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 📧 Email: [umairaziz682@gmail.com](mailto:umairaziz682@gmail.com)
 - 💼 LinkedIn: [umairaziz001](https://linkedin.com/in/umairaziz001)
-- 🌐 Portfolio: [your-deployed-url.vercel.app](https://umairaziz-cyber-portfolio.vercel.app/)
+- 🌐 Portfolio: [https://umairaziz-cyber-portfolio.vercel.app/](https://umairaziz-cyber-portfolio.vercel.app/)
 - 📱 Phone: +92 3146018728
 
 ---
