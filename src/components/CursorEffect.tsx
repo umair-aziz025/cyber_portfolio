@@ -41,40 +41,57 @@ const CursorEffect: React.FC = () => {
           // Clean up trail array
           touchTrailArray = touchTrailArray.filter(trail => trail.element !== dot);
         }, 1000); // Slightly faster fade for mobile
-      };
-
-      // Handle touch events
+      };      // Handle touch events
       let lastTouchTime = 0;
+      let isActuallyTouching = false;
+      let touchStartY = 0;
+      let touchStartX = 0;
       const touchInterval = 60; // Create trail every 60ms for smoother mobile experience
       
+      const handleTouchStart = (e: TouchEvent) => {
+        const touch = e.touches[0];
+        if (touch) {
+          isActuallyTouching = true;
+          touchStartY = touch.clientY;
+          touchStartX = touch.clientX;
+          createTouchTrailDot(touch.clientX, touch.clientY);
+        }
+      };
+
       const handleTouchMove = (e: TouchEvent) => {
-        // DON'T prevent default - allow normal scrolling
-        const now = Date.now();
+        if (!isActuallyTouching) return;
         
-        if (now - lastTouchTime > touchInterval) {
-          const touch = e.touches[0];
-          if (touch) {
+        const touch = e.touches[0];
+        if (!touch) return;
+        
+        const now = Date.now();
+        const deltaY = Math.abs(touch.clientY - touchStartY);
+        const deltaX = Math.abs(touch.clientX - touchStartX);
+        
+        // Only create trails if it's more of a horizontal swipe or small movement
+        // Allow vertical scrolling by not interfering with it
+        if (deltaX > deltaY || (deltaX < 10 && deltaY < 10)) {
+          if (now - lastTouchTime > touchInterval) {
             createTouchTrailDot(touch.clientX, touch.clientY);
             lastTouchTime = now;
           }
         }
       };
 
-      const handleTouchStart = (e: TouchEvent) => {
-        const touch = e.touches[0];
-        if (touch) {
-          createTouchTrailDot(touch.clientX, touch.clientY);
-        }
+      const handleTouchEnd = () => {
+        isActuallyTouching = false;
       };
 
-      // Add touch event listeners with passive: true for better scrolling performance
-      document.addEventListener('touchmove', handleTouchMove, { passive: true });
+      // Add touch event listeners - all passive to not interfere with scrolling
       document.addEventListener('touchstart', handleTouchStart, { passive: true });
+      document.addEventListener('touchmove', handleTouchMove, { passive: true });
+      document.addEventListener('touchend', handleTouchEnd, { passive: true });
 
       // Cleanup for mobile
       return () => {
-        document.removeEventListener('touchmove', handleTouchMove);
         document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
         
         // Clean up any remaining touch trail elements
         touchTrailArray.forEach(trail => {
