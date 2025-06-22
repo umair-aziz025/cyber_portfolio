@@ -7,7 +7,8 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-center">
           <p className="text-green-400 text-sm font-semibold flex items-center gap-2">
-            Design with <Heart className="w-4 h-4 text-green-400 animate-heartbeat" /> by Mr. Umair
+            Design with <Heart className="w-4 h-4 text-green-400 animate-heartbeat" /> by 
+            <span className="signature-font ml-1">Mr. Umair</span>
           </p>
         </div>
       </div>
