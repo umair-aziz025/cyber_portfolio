@@ -188,7 +188,7 @@ const CursorEffect: React.FC = () => {
           moveTimeout = setTimeout(() => {
             isMoving = false;
             showSpotlight();
-          }, 1000); // Show spotlight after 1 second of no movement
+          }, 5000); // Show spotlight after 5 seconds of no movement
         }
       };
 

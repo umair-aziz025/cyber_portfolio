@@ -329,8 +329,7 @@ const Dashboard: React.FC = () => {
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse">
               <Shield className="w-8 h-8 text-black" />
-            </div>
-            <h2 className="text-5xl font-bold text-white glow-green cyber-title">
+            </div>            <h2 className="text-5xl font-bold text-white glow-green">
               CYBERSECURITY COMMAND CENTER
             </h2>
           </div>
