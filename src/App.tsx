@@ -9,6 +9,8 @@ import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MatrixBackground from './components/MatrixBackground';
+import CursorEffect from './components/CursorEffect';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -60,21 +62,27 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Matrix Background Animation */}
+      <MatrixBackground />
+      
       {/* Sophisticated Dark + Green Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-gradient-radial from-green-500/10 via-transparent to-transparent animate-pulse"></div>
-        <div className="absolute inset-0 opacity-30">
+      <div className="fixed inset-0 bg-gradient-to-br from-black/90 via-gray-900/90 to-black/90 z-1">
+        <div className="absolute inset-0 bg-gradient-radial from-green-500/5 via-transparent to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern animate-grid-move"></div>
         </div>
       </div>
       
-      <div className="relative z-10">
+      <div className="relative z-20">
         <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <main className="min-h-screen pt-20">
           {renderPage()}
         </main>
         <Footer />
       </div>
+      
+      {/* Cursor Effect */}
+      <CursorEffect />
     </div>
   );
 }

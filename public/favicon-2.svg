@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00cc6a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#008855;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with subtle gradient -->
+  <circle cx="16" cy="16" r="15" fill="#000000" stroke="url(#shieldGradient)" stroke-width="2"/>
+  
+  <!-- Main shield shape -->
+  <path d="M16 3 L24 7 L24 16 C24 22 16 28 16 28 C16 28 8 22 8 16 L8 7 Z" 
+        fill="url(#shieldGradient)" 
+        filter="url(#glow)"
+        opacity="0.9"/>
+  
+  <!-- Lock icon inside shield -->
+  <rect x="13" y="14" width="6" height="7" rx="1" fill="url(#lockGradient)" opacity="0.95"/>
+  <path d="M14 14 L14 12 C14 10.9 14.9 10 16 10 C17.1 10 18 10.9 18 12 L18 14" 
+        stroke="url(#lockGradient)" 
+        stroke-width="1.5" 
+        fill="none"/>
+  <circle cx="16" cy="17.5" r="1" fill="#000000"/>
+  
+  <!-- Binary code pattern (subtle) -->
+  <text x="6" y="8" font-family="monospace" font-size="3" fill="#00ff88" opacity="0.3">01</text>
+  <text x="23" y="12" font-family="monospace" font-size="3" fill="#00ff88" opacity="0.3">10</text>
+  <text x="5" y="25" font-family="monospace" font-size="3" fill="#00ff88" opacity="0.3">11</text>
+  <text x="24" y="27" font-family="monospace" font-size="3" fill="#00ff88" opacity="0.3">01</text>
+</svg>

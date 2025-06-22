@@ -110,8 +110,8 @@ const Projects: React.FC = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-8 md:mb-16">
+      <div className="container mx-auto px-0 md:px-6 relative z-10">
+        <div className="text-center mb-8 md:mb-16 px-6">
           <div className="flex items-center justify-center gap-3 mb-4 md:mb-6">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
               <Shield className="w-5 h-5 md:w-6 md:h-6 text-black" />
@@ -142,19 +142,20 @@ const Projects: React.FC = () => {
           </button>
 
           {/* Cards Container */}
-          <div className="overflow-hidden px-4 md:px-16">
+          <div className={`overflow-hidden ${cardsToShow === 1 ? 'px-0' : 'px-4 md:px-16'}`}>
             <div 
-              className="flex transition-transform duration-500 ease-in-out gap-4 md:gap-6"
+              className={`flex transition-transform duration-500 ease-in-out ${cardsToShow === 1 ? 'gap-0' : 'gap-4 md:gap-6'}`}
               style={{ transform: `translateX(-${currentSlide * (100 / cardsToShow)}%)` }}
             >
               {projects.map((project, index) => (
                 <div 
                   key={index}
-                  className={`flex-shrink-0 card-glow card-animated-border rounded-xl overflow-hidden group hover:scale-105 transition-all duration-300 ${
-                    cardsToShow === 1 ? 'w-full' : 
-                    cardsToShow === 2 ? 'w-1/2' : 'w-1/3'
-                  }`}
-                  style={{ minWidth: `calc(${100 / cardsToShow}% - ${cardsToShow === 1 ? '0' : '1rem'})` }}
+                  className="flex-shrink-0 card-glow card-animated-border rounded-xl overflow-hidden group hover:scale-105 transition-all duration-300"
+                  style={{ 
+                    width: cardsToShow === 1 ? '100vw' : `calc(${100 / cardsToShow}% - ${cardsToShow === 2 ? '0.75rem' : '1.25rem'})`,
+                    maxWidth: cardsToShow === 1 ? 'calc(100vw - 3rem)' : 'none',
+                    margin: cardsToShow === 1 ? '0 1.5rem' : '0'
+                  }}
                 >
                   <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
                   

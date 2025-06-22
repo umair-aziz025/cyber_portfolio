@@ -417,6 +417,38 @@ body {
   opacity: 0.6;
 }
 
+/* Matrix Background Effects */
+.matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* Enhanced Matrix text glow */
+.matrix-char {
+  text-shadow: 
+    0 0 5px #00ff88,
+    0 0 10px #00ff88,
+    0 0 15px #00ff88;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+/* Matrix fade animation */
+@keyframes matrix-fade {
+  0% { opacity: 1; }
+  100% { opacity: 0.1; }
+}
+
+.matrix-fade {
+  animation: matrix-fade 2s ease-in-out infinite alternate;
+}
+
 /* Pulse effect for live indicators */
 @keyframes cyber-pulse {
   0%, 100% {
@@ -578,4 +610,105 @@ body {
   transform: translateX(-50%);
   animation: star-burst 2s ease-in-out infinite;
   animation-delay: 2.1s;
+}
+
+/* Glassmorphism Effects */
+.glass-effect {
+  background: rgba(0, 255, 136, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+.glass-container {
+  background: rgba(0, 255, 136, 0.05);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 60px rgba(0, 255, 136, 0.15);
+}
+
+/* Cursor Trail Effect */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.8;
+  box-shadow: 
+    0 0 8px #00ff88,
+    0 0 16px #00ff88,
+    0 0 24px rgba(0, 255, 136, 0.5);
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+/* Cursor trail variations for more dynamic effect */
+.cursor-trail.variant-1 {
+  width: 6px;
+  height: 6px;
+  background: #00cc6a;
+  animation-duration: 0.8s;
+}
+
+.cursor-trail.variant-2 {
+  width: 10px;
+  height: 10px;
+  background: #008855;
+  animation-duration: 1.2s;
+}
+
+/* Mobile Touch Trail Optimizations */
+@media (max-width: 768px) {
+  .cursor-trail {
+    width: 10px;
+    height: 10px;
+    animation-duration: 1s; /* Faster fade on mobile */
+  }
+  
+  .cursor-trail.variant-1 {
+    width: 8px;
+    height: 8px;
+    animation-duration: 0.8s;
+  }
+  
+  .cursor-trail.variant-2 {
+    width: 12px;
+    height: 12px;
+    animation-duration: 1.2s;
+  }
+  
+  /* Optimize animations for mobile performance */
+  .cursor-trail {
+    will-change: transform, opacity;
+    transform: translateZ(0); /* Hardware acceleration */
+  }
+}
+
+/* Prevent text selection during touch trails */
+body.touch-trailing {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

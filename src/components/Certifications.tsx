@@ -3,17 +3,14 @@ import { Award, BookOpen } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   const certifications = [
-    "Cybersecurity Professional Certificate – Google",
-    "IBM cybersecurity analyst professional certificate – IBM",
-    "CompTIA Network+ (N10-008) – Packt - In Progress",
-    "IBM IT Fundamentals for Cybersecurity – IBM",
-    "Applied Cryptography – University of Colorado System",
-    "Advanced Network Security – Learn Quest",
-    "Security Analyst Fundamentals – IBM",
-    "Cybersecurity Attack and Defense Fundamentals – EC-Council",
-    "Career Essentials in Data Analysis – Microsoft & LinkedIn",
-    "Certified HTML, CSS, WordPress Developer - Udemy",
-    "Google AI Essentials - Google"
+    "Cybersecurity Professional Certificate | Google",
+    "IBM Cybersecurity Analyst Professional Certificate | IBM",
+    "CompTIA Network+ (N10-008) | In Progress",
+    "IT Fundamentals for Cybersecurity | IBM",
+    "Security Analyst Fundamentals | IBM",
+    "Cybersecurity Attack and Defense Fundamentals | EC-Council",
+    "Applied Cryptography | University of Colorado System",
+    "Advanced Network Security | Learn Quest"
   ];
 
   const workshops = [

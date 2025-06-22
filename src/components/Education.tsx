@@ -2,7 +2,7 @@ import React from 'react';
 import { GraduationCap, Globe, BookOpen, Calendar } from 'lucide-react';
 
 const Education: React.FC = () => {
-  const courses = ["Network Security", "Operating Systems", "Database Security", "Programming Fundamentals", "Cybersecurity Fundamentals", "Data Structures", "Software Engineering", "Computer Networks"];
+  const courses = ["Computer Networks", "Network Security", "Operating Systems", "Database Administration", "Cryptography", "Ethical Hacking"];
 
   return (
     <section className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
@@ -39,7 +39,7 @@ const Education: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-green-400" />
-                    <span className="text-gray-300">In Progress</span>
+                    <span className="text-gray-300">Expected Graduation: September 2025</span>
                   </div>
                 </div>
                 

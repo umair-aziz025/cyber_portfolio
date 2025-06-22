@@ -310,16 +310,15 @@ const Dashboard: React.FC = () => {
     { id: 5, type: 'INFO', message: 'System Backup Completed Successfully', time: '23:35:10', color: '#00ffff' },
   ];
 
-  return (
-    <section className="min-h-screen py-20 relative overflow-hidden">
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-gradient-radial from-green-500/5 via-transparent to-transparent"></div>
-        <div className="absolute inset-0 opacity-20">
+  return (    <section className="min-h-screen py-20 relative overflow-hidden">
+      {/* Enhanced Background Effects - Made ultra transparent for Matrix visibility */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-gray-900/20 to-black/20">
+        <div className="absolute inset-0 bg-gradient-radial from-green-500/1 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern animate-grid-move"></div>
         </div>
         {/* Animated scanlines */}
-        <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="cyber-scanlines"></div>
         </div>
       </div>
